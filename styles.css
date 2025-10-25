@@ -1,4 +1,131 @@
-.golden-img {
-    max-width: 50%;
-    height: auto;
+/* ---------- SHENGO THEME COLORS ---------- */
+:root {
+--bg: #f7f7f7; /* light gray background */
+--card: #ffffff; /* white content cards */
+--accent: #F37C1E; /* SHENGO orange */
+--ink: #000000; /* main text color */
+--soft: #e6e6e6; /* border light gray */
+}
+
+/* ---------- GLOBAL ---------- */
+* { box-sizing: border-box; }
+
+body {
+font-family: "Open Sans", Arial, sans-serif;
+background-color: var(--bg);
+color: var(--ink);
+margin: 0;
+line-height: 1.6;
+}
+
+/* ---------- NAVIGATION BAR (FULL ORANGE STRIP) ---------- */
+.site-header {
+background-color: var(--accent);
+border-bottom: none;
+box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+/* Optional sticky header: uncomment to keep on top while scrolling */
+/* position: sticky;
+top: 0;
+z-index: 1000; */
+}
+
+.topnav {
+width: min(100%, 960px);
+margin: 0 auto;
+display: flex;
+justify-content: center;
+gap: 2rem;
+padding: 1rem;
+}
+
+.topnav a {
+text-decoration: none;
+color: #fff; /* white links on orange */
+font-weight: bold;
+font-size: 1.1rem;
+padding: 0.4rem 0.8rem;
+border-radius: 5px;
+transition: all 0.25s ease;
+}
+
+.topnav a:hover {
+background-color: #fff;
+color: var(--accent);
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+width: min(100%, 960px);
+margin: 2rem auto;
+background: var(--card);
+padding: 1.5rem;
+border-radius: 10px;
+border: 1px solid var(--soft);
+box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- HEADINGS ---------- */
+h1 {
+text-align: center; /* rubric requires a centered H1 or H2 */
+color: var(--accent);
+font-family: "Montserrat", Arial, sans-serif;
+}
+
+h2 {
+color: var(--accent);
+margin-top: 1.5rem;
+}
+
+/* ---------- TEXT & IMAGES ---------- */
+p { text-align: left; } /* rubric: paragraphs should NOT be centered */
+
+img {
+display: block;
+margin: 1rem auto;
+border-radius: 8px;
+border: 2px solid var(--soft);
+}
+
+/* ---------- FORM ---------- */
+.contact-form {
+display: grid;
+gap: 1rem;
+margin-top: 1rem;
+}
+
+.form-row {
+display: grid;
+gap: 0.5rem;
+}
+
+input[type="text"],
+select,
+textarea {
+width: 100%;
+padding: 0.6rem 0.75rem;
+border: 1px solid var(--soft);
+border-radius: 6px;
+font: inherit;
+}
+
+button[type="submit"] {
+padding: 0.7rem 1.2rem;
+background-color: var(--accent);
+border: none;
+color: white;
+font-weight: bold;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.25s ease;
+}
+button[type="submit"]:hover { background-color: #d86400; }
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+width: min(100%, 960px);
+margin: 2rem auto 3rem;
+text-align: center;
+color: #555;
+font-size: 0.9rem;
 }
